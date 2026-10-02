@@ -35,15 +35,19 @@ window.PROMO = {
         meta2: "确定性复现",
         meta3: "SVG 矢量"
       },
-      terminal: {
-        title: "zsh — iskill-geometric-bg",
-        lines: [
-          [{ t: "$ ", c: "p" }, { t: "node scripts/gen-bg.mjs --style topo --seed 42 --palette ocean --dark", c: "k" }],
-          [{ t: "✓ ", c: "p" }, { t: "geo-topo-42.svg  (topo, seed=42, 1600x900, dark)", c: "s" }],
-          [{ t: "$ ", c: "p" }, { t: "node scripts/gen-bg.mjs", c: "k" }, { t: "            # 随机来一张 1600x900", c: "c" }],
-          [{ t: "✓ ", c: "p" }, { t: "geo-bauhaus-518273.svg  (bauhaus, seed=518273, 1600x900, light)", c: "s" }]
+      chat: {
+        title: "AI Agent · 对话现场",
+        status: "在线",
+        userLabel: "你",
+        agentLabel: "AI",
+        messages: [
+          { role: "user", text: "来一张深色几何背景，1600x900，做官网 hero 底图" },
+          { role: "agent", text: "种子随机（mulberry32）+ value noise/fbm 生成，同参数同图可复现；六种风格可选，我先出几张变体给你挑。", tag: "seed 42 · topo" },
+          { role: "user", text: "看中其中一张，想换个尺寸" },
+          { role: "agent", text: "把那张文件名里的 seed 给我就行——照原样重渲染成你要的尺寸或配色。" }
         ]
       },
+
 
       stats: [
         { value: "6", label: "种几何风格", note: "mesh / rings / waves / topo / bauhaus / dots" },
@@ -154,15 +158,19 @@ window.PROMO = {
         meta2: "Reproducible",
         meta3: "Vector SVG"
       },
-      terminal: {
-        title: "zsh — iskill-geometric-bg",
-        lines: [
-          [{ t: "$ ", c: "p" }, { t: "node scripts/gen-bg.mjs --style topo --seed 42 --palette ocean --dark", c: "k" }],
-          [{ t: "✓ ", c: "p" }, { t: "geo-topo-42.svg  (topo, seed=42, 1600x900, dark)", c: "s" }],
-          [{ t: "$ ", c: "p" }, { t: "node scripts/gen-bg.mjs", c: "k" }, { t: "            # a random 1600x900", c: "c" }],
-          [{ t: "✓ ", c: "p" }, { t: "geo-bauhaus-518273.svg  (bauhaus, seed=518273, 1600x900, light)", c: "s" }]
+      chat: {
+        title: "AI Agent · live session",
+        status: "online",
+        userLabel: "You",
+        agentLabel: "AI",
+        messages: [
+          { role: "user", text: "Give me a dark geometric background, 1600x900, as the hero image" },
+          { role: "agent", text: "Seeded random (mulberry32) plus value noise/fbm — same params, same image, reproducible. Six styles available; I'll render a few variants to choose from.", tag: "seed 42 · topo" },
+          { role: "user", text: "I like one of them — can I get another size?" },
+          { role: "agent", text: "Just give me the seed in its filename and I'll re-render that exact look at any size or palette." }
         ]
       },
+
 
       stats: [
         { value: "6", label: "geometric styles", note: "mesh / rings / waves / topo / bauhaus / dots" },
