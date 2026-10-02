@@ -107,13 +107,14 @@ window.PROMO = {
       steps: {
         eyebrow: "上手",
         title: "三步跑起来",
-        sub: "",
+        sub: "命令由 agent 跑，你只说要什么、看结果。",
         items: [
           { title: "交给 AI 装", desc: "把这句话粘进对话框，agent 会自己拉代码、读文档，再告诉你用法。", codeKey: "install" },
-          { title: "生成一张", desc: "最常用的一条命令：指定风格、种子、调色板与深色底。", codeName: "bash", code: "node scripts/gen-bg.mjs --style topo --seed 42 --palette ocean --dark" },
-          { title: "批量挑图", desc: "一次出多张变体，选中哪张记下文件名里的 seed 回头精修。", codeName: "bash", code: "node scripts/gen-bg.mjs --count 12 --out ./bg" }
+          { title: "说要什么底图", desc: "风格、种子、调色板可以不说，让它给建议；同参数永远同一张图。", codeName: "prompt", code: "来一张深色几何背景，1600x900，做官网 hero 底图，多出几张我挑。" },
+          { title: "挑一张，记下 seed", desc: "看中的那张把文件名里的 seed 报给它，就能照原样精修尺寸或配色。" }
         ]
       },
+
 
       faq: {
         eyebrow: "问答",
@@ -225,13 +226,14 @@ window.PROMO = {
       steps: {
         eyebrow: "Get started",
         title: "Up and running in three steps",
-        sub: "",
+        sub: "The agent runs the commands. You say what you want and check the result.",
         items: [
-          { title: "Let your agent install it", desc: "Paste the line into the chat — it clones the repo, reads the docs and tells you how to use it.", codeKey: "install" },
-          { title: "Generate one", desc: "The command you will use most: pick style, seed, palette and a dark base.", codeName: "bash", code: "node scripts/gen-bg.mjs --style topo --seed 42 --palette ocean --dark" },
-          { title: "Batch and pick", desc: "Emit many variants at once; note the seed in the filename of your favourite.", codeName: "bash", code: "node scripts/gen-bg.mjs --count 12 --out ./bg" }
+          { title: "Let your agent install it", desc: "Paste the line into the chat — it clones the repo, reads the docs, and tells you how to use it.", codeKey: "install" },
+          { title: "Say what background you want", desc: "Style, seed and palette are optional — it will suggest. Same params always give the same image.", codeName: "prompt", code: "Give me a dark geometric background, 1600x900, as the hero image for our site — a few variants so I can pick one." },
+          { title: "Pick one, note the seed", desc: "Tell it the seed from the filename of the one you like, and it re-renders that exact look at any size." }
         ]
       },
+
 
       faq: {
         eyebrow: "FAQ",
