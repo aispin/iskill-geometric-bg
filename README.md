@@ -79,4 +79,4 @@ node scripts/gen-bg.mjs --count 6 --out ./bg
 同心环底纹思路源自 [iskill-generate-sponsors](https://github.com/aispin/iskill-generate-sponsors)
 外链卡的 CSS 生成式底纹，本技能将其泛化为独立的多风格 SVG 生成器。
 
-> 依赖同步：本仓库含 iskill 共享真源的 vendored 副本（清单见 `package.json` 的 `iskillDeps`），**不要手改**。使用前请同时安装 iskill-dep-sync：对 agent 说「请帮我安装 Skill：aispin/iskill-dep-sync」；用法见 SKILL.md「依赖同步」节。
+> 依赖同步：本仓库含 iskill 共享真源的 vendored 副本（清单见 `package.json` 的 `iskillDeps`），**不要手改**。使用前请同时安装 iskill-utils：对 agent 说「请帮我安装 Skill：aispin/iskill-utils」；用法见 SKILL.md「依赖同步」节。
