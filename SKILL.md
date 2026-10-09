@@ -1,7 +1,7 @@
 ---
 name: iskill-geometric-bg
 summary: 几何背景图生成 CLI——种子随机、确定性复现，输出轻量 SVG。六种风格（mesh 柔光 / rings 同心环 / waves 波浪 / topo 等高线 / bauhaus 构成 / dots 点阵）× 预置调色板 × 深浅色，零三方依赖，适合 hero 背景、OG 图、PPT 底图、网页纹理。
-description: 当用户要生成背景图、几何背景、纹理底图、hero 背景、banner 背景、装饰图案，问「来一张背景图」「生成几何背景」「做个 OG 配图底」时使用。触发词：几何背景、背景图、geometric bg、底纹、纹理背景、hero 背景、mesh gradient、bauhaus。基于种子随机（mulberry32）+ value noise/fbm，同参数同图可复现；--count 批量出变体；纯 Node ≥ 18 标准库实现。
+description: 当用户要生成背景图、几何背景、纹理底图、hero 背景、banner 背景、装饰图案，问「来一张背景图」「生成几何背景」「做个 OG 配图底」时使用。触发词：几何背景、背景图、geometric bg、底纹、纹理背景、hero 背景、mesh gradient、bauhaus。基于种子随机（mulberry32）+ value noise/fbm，同参数同图可复现；--count 批量出变体；纯 Node ≥ 24 标准库实现。
 agent_created: true
 ---
 
@@ -75,7 +75,7 @@ node scripts/gen-bg.mjs --count 6 --out ./bg
 
 本仓库 `promo-page/assets/{app.js,style.css,icons.js}` 是 [iskill-promo-page](https://github.com/aispin/iskill-promo-page)
 模板引擎的 vendored 副本（锁定版本见 `package.json` 的 `iskillDeps`），**不要手改**——
-去真源仓库改并升 `@iskill-version`，再用 iskill-dep-sync 同步回来（本机无该工具时按下面自举）：
+去真源仓库改并升 `@iskill-version`，再用 iskill-dep-sync 同步回来。本机未装该工具时，先安装：对 agent 说「请帮我安装 Skill：aispin/iskill-dep-sync」，或按下方自举命令现场拉取：
 
 ```bash
 T="$HOME/.workbuddy/skills/iskill-dep-sync/scripts/skill-deps.mjs"

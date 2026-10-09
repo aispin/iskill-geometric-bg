@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// iskill-geometric-bg — 几何背景图生成 CLI（零依赖，Node >= 18，输出 SVG）
+// iskill-geometric-bg — 几何背景图生成 CLI（零依赖，Node >= 24，输出 SVG）
 import { makeRng, mixHex, f2 } from './lib/rand.mjs';
 import { fbm } from './lib/noise.mjs';
 import { PALETTES, STYLE_NAMES } from './lib/palettes.mjs';
